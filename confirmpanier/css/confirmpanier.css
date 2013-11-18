@@ -1,0 +1,104 @@
+#confirmPanier {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .4);
+	top: 0;
+	left: 0;
+	z-index: 2000;
+	vertical-align: middle;
+	text-align: center;
+	display: none;
+	box-shadow: 0px 0px 10px 11px black;
+}
+
+span.vAlignCenter { 
+	height: 100%;
+	vertical-align: middle;
+	display: inline-block; 
+}
+
+#blocConfirmation {
+	background: #FFF;
+    text-align: left;
+    width: 600px;
+    vertical-align: middle;
+    display: inline-block;
+    z-index: 9999;
+    position: relative;
+}
+
+#cpLogo {
+	position: absolute;
+	top: -40px;
+	left: -30px;
+}
+
+#cpHeader {
+	background: #ecd078;
+	height: 80px;
+}
+
+#cpBody {
+	padding: 15px;
+}
+
+#cpHeaderText {
+	font-size: 24px;
+}
+
+#cpInfo img {
+float: left;
+margin-right: 15px;
+margin-bottom: 10px;
+}
+
+.cpTitle {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#cpPriceInfo {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+#cpPriceInfo .cpQty {
+	font-size: 12px;
+}
+
+#cpPriceInfo {
+	color: #C86438;
+	text-align: right;
+}
+
+#cpPriceInfo p {
+	margin: 0;
+}
+
+#cpLink {
+	padding: 15px 10px;
+	clear: both;
+	background: #ecd078;
+}
+
+#cpLink a {
+	padding: 5px 10px;
+	background: #53777a;
+	color: #DEC49C;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+#cpLink a.cpShopping {
+	float: left;
+}
+
+#cpLink a.cpCart {
+	float: right;
+}
+
+#cpLink .clear {
+	clear: both;
+}
