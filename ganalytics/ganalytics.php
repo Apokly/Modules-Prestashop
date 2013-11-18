@@ -4,7 +4,7 @@ if (!defined('_PS_VERSION_'))
 	exit;
 
 
-class ConfirmPanier extends Module {
+class Ganalytics extends Module {
 	public function __construct()
 	{
 		$this->name = 'ganalytics';
