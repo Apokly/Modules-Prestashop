@@ -30,8 +30,6 @@ class DeleteOrder extends Module {
 			Shop::setContext(Shop::CONTEXT_ALL);
 
 		return parent::install() &&
-			$this->registerHook('displayAdminOrder') &&
-			$this->registerHook('header') &&
 			Configuration::updateValue('DELETE_ORDER', 'my friend');
 	}
 
