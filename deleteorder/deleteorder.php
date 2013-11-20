@@ -56,7 +56,7 @@ class DeleteOrder extends Module {
 	        	if ($deleteStatus == '1')
 	        		Configuration::updateValue('DELETE_STATUS', $deleteStatus);
 	        	else
-	        		Configuration::deleteByName('DELETE_ORDER');
+	        		Configuration::deleteByName('DELETE_STATUS');
 	            $output .= $this->displayConfirmation($this->l('Settings updated'));
 	        }
     	}
