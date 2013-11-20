@@ -30,7 +30,7 @@ class DeleteOrder extends Module {
 			Shop::setContext(Shop::CONTEXT_ALL);
 
 		return parent::install() &&
-		Configuration::updateValue('DELETE_STATUS', 'off') &&
+		Configuration::updateValue('DELETE_STATUS', '1') &&
 			Configuration::updateValue('DELETE_ORDER', 'my friend');
 	}
 
