@@ -16,9 +16,9 @@ class DeleteOrder extends Module {
 		parent::__construct();
 
 		$this->displayName = $this->l('Delete order');
-		$this->description = $this->l('Permet à l\'administrateur de supprimer une commande passée');
+		$this->description = $this->l('Allow to user to delete customer shopping cart and commands');
 
-		$this->confirmUninstall = $this->l('Êtes-vous sur de vouloir désinstaller le module?');
+		$this->confirmUninstall = $this->l('Are you sure you want to uninstall?');
 
 		if (!Configuration::get('DELETE_ORDER'))
 			$this->warning = $this->l('No name provided');
