@@ -8,7 +8,7 @@ class AdminCartsController extends AdminCartsControllerCore {
 
 	function displayDeleteLink($token = null, $id, $name = null)
 	{
-		if (Configuration::get('DELETE_ORDER'))
+		if (Configuration::get('DELETE_STATUS'))
 		{
 			return $this->helper->displayDeleteLink($token, $id, $name);
 		}
