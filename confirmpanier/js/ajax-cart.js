@@ -227,6 +227,7 @@ var ajaxCart = {
 				
 				/* Display pop-up bloc */
 				$('#confirmPanier').fadeIn('fast');
+				$('#cpBgBlack').fadeIn('fast');
 		    },
 			error: function(XMLHttpRequest, textStatus, errorThrown)
 			{
@@ -654,6 +655,20 @@ $(document).ready(function(){
 	/* Avoid cart ajax slide down */
 	$('#cart_block').html('');
 	$('#cart_block').css('border', 'none');
+	
+	$('#cpDarkBG').on('click', function(e) {
+		$("#confirmPanier").hide();
+	});
+	
+	$('#cpLink a').on('click', function(e) {
+		$("#confirmPanier").hide();
+	});
+	
+	$('#cpStopShow').on('click', function(e) {
+		localStorage.setItem('noShow', 1);
+	});
+
+
 
 	// expand/collapse management
 	$('#block_cart_collapse').click(function(){

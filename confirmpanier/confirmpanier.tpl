@@ -1,4 +1,5 @@
 <div id="confirmPanier">
+	<div id="cpDarkBG"></div>
 		<span class="vAlignCenter"></span>
 		<div id="blocConfirmation">
 			<div id="cpHeader">
@@ -25,9 +26,12 @@
 					</div>
 				</div>
 			</div>
+			<div id="cpStop">
+				<input type="checkbox" id="cpStopShow" name="cpStopShow" /> <label for="cpStopShow">Ne plus afficher cette fenêtre</label>
+			</div>
 			<div id="cpLink">
 				<a class="cpShopping" href="#" title="{l s='Continue shopping' mod='confirmpanier'}">{l s='Continue shopping' mod='confirmpanier'}</a>
-				<a class="cpCart"  href="{$link->getPageLink('cart')}" title="{l s='View cart' mod='confirmpanier'}">{l s='View cart' mod='confirmpanier'}</a>
+				<a class="cpCart"  href="{$link->getPageLink('order')}" title="{l s='View cart' mod='confirmpanier'}">{l s='View cart' mod='confirmpanier'}</a>
 				<div class="clear"></div>
 			</div>
 		</div>

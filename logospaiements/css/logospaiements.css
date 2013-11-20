@@ -1,0 +1,8 @@
+#logosPaiements {
+	background: url(../img/logo_paiements.png) no-repeat center center;
+	width: 332px;
+	height: 31px;
+	position: absolute;
+	bottom: 10px;
+	right: 400px;
+}
