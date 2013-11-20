@@ -9,7 +9,10 @@ class AdminOrdersController extends AdminOrdersControllerCore {
 	function AdminOrdersController()
 	{
 		parent::__construct();
-		$this->addRowAction('delete');
+		if (Configuration::get('DELETE_ORDER'))
+		{
+			$this->addRowAction('delete');
+		}
 	}
 
 }
