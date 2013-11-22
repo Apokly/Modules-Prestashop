@@ -15,3 +15,5 @@ TODO : Module which change website background
 TODO : Module which create a carroussel
 
 TODO : Module to customize the administration login page
+
+TODO : Module to insert a google map on the contact page (with lat and long)
