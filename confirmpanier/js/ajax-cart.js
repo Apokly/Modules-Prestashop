@@ -183,6 +183,8 @@ var ajaxCart = {
 			return ;
 		}
 		emptyCustomizations();
+	
+		
 		//disabled the button when adding to not double add if user double click
 		if (addedFromProductPage)
 		{
@@ -209,25 +211,29 @@ var ajaxCart = {
 		        if (whishlist && !jsonData.errors)
 		            WishlistAddProductCart(whishlist[0], idProduct, idCombination, whishlist[1]);
 		        ajaxCart.updateCartInformation(jsonData, addedFromProductPage);
-		        		        
-		        /* Display the logo */
-				$("#cpLogo").find('img').attr('src', $('.logo').attr('src'));
-				
-				
-				$(jsonData.products).each(function(){ 
-					if( this.id == idProduct ){
-						var imageLink = this.image;
-											
-						$("#cpInfo").find('img').attr('src', imageLink.replace(/small/g, 'home'));
-						$("#cpInfo").find('p.cpTitle').html( this.name );
-						$("#cpInfo").find('.cpQtyField').html( 'x ' + this.quantity );
-						$("#cpInfo").find('.cpTotalField').html( this.price );
-					}
-				});
-				
-				/* Display pop-up bloc */
-				$('#confirmPanier').fadeIn('fast');
-				$('#cpBgBlack').fadeIn('fast');
+		        
+		      	if( localStorage.getItem('noShow') != 1 ) {      
+			        /* Display the logo */
+					$("#cpLogo").find('img').attr('src', $('.logo').attr('src'));
+					
+					
+					$(jsonData.products).each(function(){ 
+						if( this.id == idProduct ){
+							var imageLink = this.image;
+												
+							$("#cpInfo").find('img').attr('src', imageLink.replace(/small/g, 'home'));
+							$("#cpInfo").find('p.cpTitle').html( this.name );
+							$("#cpInfo").find('.cpQtyField').html( 'x ' + this.quantity );
+							$("#cpInfo").find('.cpTotalField').html( this.price );
+						}
+					});
+					
+					/* Display pop-up bloc */
+					$('#confirmPanier').fadeIn('fast');
+					$('#cpBgBlack').fadeIn('fast');
+				} else {					
+					window.location.href = $('a.cpCart').attr('href');
+				}
 		    },
 			error: function(XMLHttpRequest, textStatus, errorThrown)
 			{
@@ -666,6 +672,9 @@ $(document).ready(function(){
 	
 	$('#cpStopShow').on('click', function(e) {
 		localStorage.setItem('noShow', 1);
+		
+		$('#confirmPanier').fadeOut('fast');
+		$('#cpBgBlack').fadeOut('fast');
 	});
 
 
