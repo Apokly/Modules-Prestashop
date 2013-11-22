@@ -211,10 +211,12 @@ var ajaxCart = {
 		        if (whishlist && !jsonData.errors)
 		            WishlistAddProductCart(whishlist[0], idProduct, idCombination, whishlist[1]);
 		        ajaxCart.updateCartInformation(jsonData, addedFromProductPage);
-		        
+
 		      	if( localStorage.getItem('noShow') != 1 ) {      
-			        /* Display the logo */
-					$("#cpLogo").find('img').attr('src', $('.logo').attr('src'));
+			        /* Display the logo if option activated */
+			        if( cpDisplayLogo == 1 ) {
+						$("#cpLogo").find('img').attr('src', $('.logo').attr('src'));
+					}
 					
 					
 					$(jsonData.products).each(function(){ 
@@ -676,6 +678,21 @@ $(document).ready(function(){
 		$('#confirmPanier').fadeOut('fast');
 		$('#cpBgBlack').fadeOut('fast');
 	});
+	
+	/* Custom Header and Footer Color */
+	$("#cpHeader").css('background-color', headerFooterColor);
+	$("#cpLink").css('background-color', headerFooterColor);
+	
+	/* Custom Content color */
+	$("#blocConfirmation").css('background-color', contentColor);
+	$("#blocConfirmation").css('color', textColor);
+	
+	/* Custom price color */
+	$("#cpPriceInfo").css('color', priceColor);
+	
+	/* Custom button color (background + text) */
+	$("#cpLink a").css('background-color', buttonBgColor);
+	$("#cpLink a").css('color', buttonTextColor);
 
 
 

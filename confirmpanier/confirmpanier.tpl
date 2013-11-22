@@ -1,3 +1,14 @@
+
+<script type="text/javascript">
+		var cpDisplayLogo = {$DISPLAY_LOGO};
+		var headerFooterColor = "{$HEADER_FOOTER_COLOR}";
+		var contentColor = "{$CONTENT_COLOR}";
+		var textColor = "{$TEXT_COLOR}";
+		var priceColor = "{$PRICE_COLOR}";
+		var buttonBgColor = "{$BUTTON_BG_COLOR}";
+		var buttonTextColor = "{$BUTTON_TEXT_COLOR}";
+</script>
+
 <div id="confirmPanier">
 	<div id="cpDarkBG"></div>
 		<span class="vAlignCenter"></span>
