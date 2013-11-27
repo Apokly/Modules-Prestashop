@@ -17,3 +17,5 @@ TODO : Module which create a carroussel
 TODO : Module to customize the administration login page
 
 TODO : Module to insert a google map on the contact page (with lat and long)
+
+TODO : Module with a button "Promote" for an article to display this article on the home page
